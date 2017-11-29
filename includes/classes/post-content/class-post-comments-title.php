@@ -21,7 +21,7 @@ if ( ! class_exists( 'Post_Comments_Title' ) ) {
 	 * @since  0.0.1
 	 */
 	class Post_Comments_Title extends \WP_Distance_Lib\Includes\Classes\Base {
-		
+
 		/**
 		 * Comment Count.
 		 *
@@ -58,7 +58,7 @@ if ( ! class_exists( 'Post_Comments_Title' ) ) {
 			$this->comment_count = get_comments_number();
 			parent::__construct( $args );
 		}
-		
+
 		/**
 		 * Comments Title Filter.
 		 *
@@ -71,7 +71,9 @@ if ( ! class_exists( 'Post_Comments_Title' ) ) {
 			return apply_filters(
 				"{$this->prefix}filter",
 				_nx(
+					// @codingStandardsIgnoreLine
 					$this->args['title_singular'],
+					// @codingStandardsIgnoreLine
 					$this->args['title_plural'],
 					$this->comment_count,
 					'comments title',
@@ -79,7 +81,7 @@ if ( ! class_exists( 'Post_Comments_Title' ) ) {
 				)
 			);
 		}
-		
+
 		/**
 		 * Classes Filter.
 		 *
@@ -91,21 +93,21 @@ if ( ! class_exists( 'Post_Comments_Title' ) ) {
 		public function classes_filter() {
 			return apply_filters( "{$this->prefix}classes_filter", $this->args['classes'] );
 		}
-		
+
 		/**
 		 * Output Filter.
 		 *
 		 * @author Jason Witt
 		 * @since  0.0.1
 		 *
-		 * @param string string The output text.
+		 * @param string $string The output text.
 		 *
 		 * @return string
 		 */
 		public function output_filter( $string ) {
 			return apply_filters( "{$this->prefix}outout_filter", $string );
 		}
-		
+
 		/**
 		 * Output.
 		 *

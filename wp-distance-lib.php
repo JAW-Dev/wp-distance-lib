@@ -29,7 +29,7 @@ require_once trailingslashit( plugin_dir_path( __FILE__ ) ) . trailingslashit( '
 if ( ! class_exists( 'WP_Distance_Lib' ) ) {
 
 	/**
-	 * Name
+	 * Names
 	 *
 	 * @author Jason Witt
 	 * @since  0.0.1

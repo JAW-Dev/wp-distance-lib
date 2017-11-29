@@ -41,14 +41,14 @@ if ( ! class_exists( 'Post_Published' ) ) {
 		 */
 		public function __construct( $args = array() ) {
 			$this->defaults = array(
-				'text'                 => __( 'Published on', 'wp-distance-lib'),
+				'text'                 => __( 'Published on', 'wp-distance-lib' ),
 				'time_classes'         => 'published',
 				'time_updated_classes' => 'published updated',
 				'classes'              => 'published-on',
 			);
 			parent::__construct( $args );
 		}
-		
+
 		/**
 		 * Time Classes Filter.
 		 *
@@ -60,7 +60,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 		public function time_classes_filter() {
 			return apply_filters( "{$this->prefix}time_classes_filter", $this->args['time_classes'] );
 		}
-		
+
 		/**
 		 * Time Updated Classes Filter.
 		 *
@@ -72,7 +72,7 @@ if ( ! class_exists( 'Post_Published' ) ) {
 		public function time_updated_classes_filter() {
 			return apply_filters( "{$this->prefix}time_updated_classes_filter", $this->args['time_updated_classes'] );
 		}
-		
+
 		/**
 		 * Classes Filter.
 		 *
@@ -84,21 +84,21 @@ if ( ! class_exists( 'Post_Published' ) ) {
 		public function classes_filter() {
 			return apply_filters( "{$this->prefix}classes_filter", $this->args['classes'] );
 		}
-		
+
 		/**
 		 * Output Filter.
 		 *
 		 * @author Jason Witt
 		 * @since  0.0.1
 		 *
-		 * @param string string The output text.
+		 * @param string $string The output text.
 		 *
 		 * @return string
 		 */
 		public function output_filter( $string ) {
 			return apply_filters( "{$this->prefix}outout_filter", $string );
 		}
-		
+
 		/**
 		 * Output.
 		 *

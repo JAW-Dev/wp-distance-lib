@@ -41,13 +41,13 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 		 */
 		public function __construct( $args = array() ) {
 			$this->defaults = array(
-				'text'                 => __( 'Updated on', 'wp-distance-lib'),
+				'text'                 => __( 'Updated on', 'wp-distance-lib' ),
 				'time_classes'         => 'updated',
 				'classes'              => 'updated-on',
 			);
 			parent::__construct( $args );
 		}
-		
+
 		/**
 		 * Time Classes Filter.
 		 *
@@ -59,7 +59,7 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 		public function time_classes_filter() {
 			return apply_filters( "{$this->prefix}time_classes_filter", $this->args['time_classes'] );
 		}
-		
+
 		/**
 		 * Classes Filter.
 		 *
@@ -71,21 +71,21 @@ if ( ! class_exists( 'Post_Updated' ) ) {
 		public function classes_filter() {
 			return apply_filters( "{$this->prefix}classes_filter", $this->args['classes'] );
 		}
-		
+
 		/**
 		 * Output Filter.
 		 *
 		 * @author Jason Witt
 		 * @since  0.0.1
 		 *
-		 * @param string string The output text.
+		 * @param string $string The output text.
 		 *
 		 * @return string
 		 */
 		public function output_filter( $string ) {
 			return apply_filters( "{$this->prefix}outout_filter", $string );
 		}
-		
+
 		/**
 		 * Output.
 		 *

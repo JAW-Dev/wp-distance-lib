@@ -20,11 +20,9 @@ if ( ! function_exists( 'wp_dl_post_published' ) ) {
 	 * @since  0.0.1
 	 *
 	 * @param array $args The arguments.
-	 *
-	 * @return string
 	 */
 	function wp_dl_post_published( $args = array() ) {
 		$published = new WP_Distance_Lib\Includes\Classes\Post_Published( $args );
-		echo $published->render();
+		echo $published->render(); // WPCS: XSS ok.
 	}
 }

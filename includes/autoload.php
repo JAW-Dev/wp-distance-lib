@@ -29,14 +29,13 @@ function _autoload_classes( $class ) {
 	// Full path to the classes directory.
 	$path  = trailingslashit( plugin_dir_path( __FILE__ ) ) . trailingslashit( 'classes' );
 	$files = new \RecursiveDirectoryIterator( trailingslashit( plugin_dir_path( __FILE__ ) ) . trailingslashit( 'classes' ) );
-	
-	
+
 	// Loop through the files.
 	foreach ( new \RecursiveIteratorIterator( $files ) as $file ) {
-		
+
 		$filename = $file->getFilename();
 		$filepath = $file->getPath();
-		
+
 		// Exclude dot files.
 		if ( '.' === substr( $filename, 0, 1 ) ) {
 			continue;

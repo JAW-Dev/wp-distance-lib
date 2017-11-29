@@ -63,7 +63,7 @@ if ( ! class_exists( 'Template_Tags' ) ) {
 			$files = $this->scan_directory();
 
 			// Loop through the $files array.
-			foreach( $files as $file ) {
+			foreach ( $files as $file ) {
 
 				// Verify that the file exists.
 				if ( file_exists( $file ) ) {
@@ -93,7 +93,7 @@ if ( ! class_exists( 'Template_Tags' ) ) {
 			foreach ( new \RecursiveIteratorIterator( $files ) as $file ) {
 				$filename = $file->getFilename();
 				$filepath = $file->getPathname();
-				
+
 				// Exclude dot files.
 				if ( '.' === substr( $filename, 0, 1 ) ) {
 					continue;

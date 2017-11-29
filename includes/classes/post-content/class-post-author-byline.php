@@ -97,7 +97,7 @@ if ( ! class_exists( 'Post_Author_Byline' ) ) {
 		 * @author Jason Witt
 		 * @since  0.0.1
 		 *
-		 * @param string string The output text.
+		 * @param string $string The output text.
 		 *
 		 * @return string
 		 */
@@ -123,7 +123,7 @@ if ( ! class_exists( 'Post_Author_Byline' ) ) {
 			$byline_classes = ( $this->args['byline_classes'] ) ? ' class="' . esc_attr( $this->byline_classes_filter() ) . '"' : '';
 			$author_classes = ( $this->args['author_classes'] ) ? ' class="' . esc_attr( $this->author_classes_filter() ) . '"' : '';
 			$output         = '<span' . $byline_classes . '">' . esc_html( $this->author_by_text_filter() ) . ' <span' . $author_classes . '">' . $link . '</span></span>';
-			
+
 			/**
 			 * Action before returing the output.
 			 *
@@ -131,7 +131,7 @@ if ( ! class_exists( 'Post_Author_Byline' ) ) {
 			 * @since  0.0.1
 			 */
 			do_action( "before_{$this->prefix}output" );
-			
+
 			return $this->output_filter( $output );
 		}
 	}

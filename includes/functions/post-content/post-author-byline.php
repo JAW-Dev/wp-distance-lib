@@ -26,6 +26,6 @@ if ( ! function_exists( 'wp_dl_post_author_byline' ) ) {
 	function wp_dl_post_author_byline( $args = array() ) {
 		global $allowedposttags;
 		$author_byline = new WP_Distance_Lib\Includes\Classes\Post_Author_Byline( $args );
-		echo $author_byline->render();
+		echo $author_byline->render(); // WPCS: XSS ok.
 	}
 }

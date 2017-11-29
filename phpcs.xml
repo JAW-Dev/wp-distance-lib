@@ -5,13 +5,12 @@
 
 	<description>A custom ruleset for WordPress code standards.</description>
 
-	<!-- <config name="installed_paths" value="/Users/jasonwitt/.composer/vendor/bin/wpcs"/>
-	<config name="installed_paths" value="/Path/to/wpcs"/> -->
-
 	<!-- Include the WordPress-Extra ruleset, with some WDS exclusions. -->
-	<rule ref="WordPress-VIP">
+	<rule ref="WordPress">
 		<exclude name="WordPress.Arrays.ArrayDeclarationSpacing.AssociativeKeyFound"/>
 		<exclude name="WordPress.Classes.ClassInstantiation.MissingParenthesis"/>
+		<exclude name="WordPress.Files.FileName.InvalidClassFileName"/>
+		<exclude name="PSR2.Methods.MethodDeclaration.Underscore"/>
 	</rule>
 
 	<!-- Allow PHP file system oprations -->

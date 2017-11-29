@@ -77,7 +77,7 @@ if ( ! class_exists( 'Content_More_Text' ) ) {
 		 * @author Jason Witt
 		 * @since  0.0.1
 		 *
-		 * @param string string The output text.
+		 * @param string $string The output text.
 		 *
 		 * @return string
 		 */

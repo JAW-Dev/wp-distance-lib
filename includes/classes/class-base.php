@@ -12,6 +12,9 @@
 
 namespace WP_Distance_Lib\Includes\Classes;
 
+/**
+ * Base Class
+ */
 abstract class Base {
 
 	/**
@@ -23,7 +26,7 @@ abstract class Base {
 	 * @var string
 	 */
 	protected $prefix = '';
-	
+
 	/**
 	 * Argument Defaults.
 	 *
